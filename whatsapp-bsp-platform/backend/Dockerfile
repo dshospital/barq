@@ -48,6 +48,6 @@ FROM node:20-alpine AS worker
 ENV NODE_ENV=production
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --only=production --legacy-peer-deps && npm cache clean --force
 COPY --from=build /app/dist ./dist
 CMD ["node", "dist/apps/message-worker/main"]
