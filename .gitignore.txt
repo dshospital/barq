@@ -1,0 +1,19 @@
+# تجاهل ملفات البيئة والأسرار (أهم سطر)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# تجاهل مكتبات نود الضخمة (يتم تثبيتها تلقائياً على السيرفر ولا ترفع)
+node_modules/
+npm-debug.log
+
+# تجاهل ملفات النظام غير الضرورية
+.DS_Store
+Thumbs.db
+
+# تجاهل ملفات البناء المؤقتة
+dist/
+build/
+.output/
