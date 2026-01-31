@@ -25,7 +25,7 @@ RUN npm run build
 
 # Production stage (تم الإصلاح هنا) 🛠️
 FROM node:20-alpine AS production
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --only=production --legacy-peer-deps && npm cache clean --force
