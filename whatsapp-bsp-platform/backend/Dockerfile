@@ -17,7 +17,7 @@ CMD ["npm", "run", "start:dev"]
 
 # Build stage (تم الإصلاح هنا) 🛠️
 FROM base AS build
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 COPY package*.json ./
 RUN npm ci --legacy-peer-deps
 COPY . .
